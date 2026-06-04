@@ -60,4 +60,4 @@ Escaneie o QR Code abaixo para acessar o Agenda Fácil diretamente pelo celular:
 </p>
 
 🔗 Ou acesse pelo link:
-https://seu-site.com
+https://projeto-integrador-4aw2.onrender.com/
