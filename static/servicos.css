@@ -1,0 +1,614 @@
+/* ============================================================
+   servicos.css  —  Listagem de Serviços
+   Depende de: global.css
+   ============================================================ */
+
+/* ─────────────────────────────────────────────────────────────
+   PÁGINA
+───────────────────────────────────────────────────────────── */
+body {
+  background: var(--bg-light);
+  color: var(--text);
+  font-family: var(--font);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   NAVBAR
+───────────────────────────────────────────────────────────── */
+.topo {
+  background: var(--nav-gradient);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, .25);
+  backdrop-filter: blur(12px);
+}
+
+.topo-container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 14px 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 16px;
+  position: relative;
+}
+
+/* LOGO */
+.logo {
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--on-dark);
+  letter-spacing: -.4px;
+  white-space: nowrap;
+}
+
+/* NAV */
+.topo nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.topo nav a {
+  color: var(--on-dark-soft);
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  transition: .2s ease;
+  white-space: nowrap;
+}
+
+.topo nav a:hover {
+  color: var(--on-dark);
+}
+
+/* Underline animado */
+.topo nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+
+  width: 0;
+  height: 2px;
+
+  background: #fff;
+  border-radius: 99px;
+
+  transition: width .25s ease;
+}
+
+.topo nav a:hover::after {
+  width: 100%;
+}
+
+/* BOTÕES */
+.btn-quero-ser-prestador,
+.btn-painel {
+  padding: 8px 16px !important;
+  border-radius: 999px !important;
+
+  background: rgba(255, 255, 255, .08) !important;
+  border: 1px solid rgba(255, 255, 255, .14) !important;
+
+  transition: .2s ease !important;
+}
+
+.btn-quero-ser-prestador:hover,
+.btn-painel:hover {
+  background: rgba(255, 255, 255, .14) !important;
+}
+
+.btn-entrar {
+  padding: 8px 18px !important;
+  border-radius: 999px !important;
+
+  background: var(--primary) !important;
+  color: #fff !important;
+
+  font-weight: 600 !important;
+
+  box-shadow: 0 8px 18px rgba(59, 130, 246, .28);
+}
+
+.btn-entrar:hover {
+  transform: translateY(-1px);
+  opacity: .92;
+}
+
+.btn-sair {
+  padding: 8px 16px !important;
+  border-radius: 999px !important;
+
+  background: rgba(239, 68, 68, .12) !important;
+  color: #fecaca !important;
+
+  border: 1px solid rgba(239, 68, 68, .18) !important;
+}
+
+.btn-perfil {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 16px;
+
+  border-radius: 999px;
+
+  background: rgba(99, 102, 241, .16);
+  border: 1px solid rgba(99, 102, 241, .18);
+
+  color: #fff !important;
+  font-weight: 600;
+}
+
+/* BOTÃO GOOGLE */
+.btn-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 8px 16px;
+
+  border-radius: 999px;
+
+  background: #fff !important;
+  color: #111827 !important;
+
+  font-weight: 600;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .12);
+
+  transition: .2s ease;
+}
+
+.btn-google:hover {
+  transform: translateY(-2px);
+  background: #f9fafb !important;
+}
+
+.btn-google img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MENU MOBILE
+───────────────────────────────────────────────────────────── */
+.nav-toggle {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, .08);
+
+  cursor: pointer;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  transition: .2s ease;
+}
+
+.nav-toggle:hover {
+  background: rgba(255, 255, 255, .14);
+}
+
+.nav-toggle span {
+  width: 20px;
+  height: 2px;
+
+  background: #fff;
+  border-radius: 99px;
+
+  transition: .3s ease;
+}
+
+/* Animação X */
+.nav-toggle--active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle--active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle--active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   CONTEÚDO
+───────────────────────────────────────────────────────────── */
+.page-wrapper {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 42px 24px 60px;
+}
+
+.page-title {
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  font-weight: 800;
+  margin-bottom: 28px;
+  color: var(--text);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   FILTRO
+───────────────────────────────────────────────────────────── */
+.filtro-bar {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+#busca,
+#filtroCategoria {
+  padding: 12px 16px;
+
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+
+  background: var(--card);
+
+  font-size: 14px;
+  font-family: var(--font);
+
+  outline: none;
+
+  transition: .2s ease;
+}
+
+#busca {
+  flex: 1;
+  min-width: 220px;
+}
+
+#filtroCategoria {
+  min-width: 220px;
+}
+
+#busca:focus,
+#filtroCategoria:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, .12);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   GRID
+───────────────────────────────────────────────────────────── */
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   CARD
+───────────────────────────────────────────────────────────── */
+.card {
+  background: var(--card);
+
+  border-radius: 24px;
+  border: 1px solid var(--border);
+
+  padding: 24px;
+
+  box-shadow: var(--shadow-xs);
+
+  display: flex;
+  flex-direction: column;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-muted);
+
+  flex-grow: 1;
+}
+
+.preco {
+  margin-top: 16px;
+
+  font-size: 18px;
+  font-weight: 800;
+
+  color: var(--primary);
+}
+
+/* BOTÃO */
+.btn-agendar {
+  margin-top: 20px;
+
+  width: 100%;
+
+  border: none;
+  border-radius: 14px;
+
+  padding: 12px 16px;
+
+  background: linear-gradient(135deg,
+      #3b82f6,
+      #2563eb);
+
+  color: #fff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform .2s ease,
+    opacity .2s ease;
+}
+
+.btn-agendar:hover {
+  transform: translateY(-2px);
+  opacity: .94;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   CTA
+───────────────────────────────────────────────────────────── */
+.orcamentos-card {
+  margin-top: 60px;
+}
+
+.cta-box {
+  background: linear-gradient(135deg,
+      #0f172a,
+      #172554);
+
+  color: #fff;
+
+  border-radius: 30px;
+
+  padding: 48px 32px;
+
+  text-align: center;
+
+  max-width: 700px;
+  margin-inline: auto;
+
+  box-shadow:
+    0 20px 40px rgba(15, 23, 42, .25);
+}
+
+.cta-box h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.cta-box p {
+  color: rgba(255, 255, 255, .72);
+  margin-bottom: 24px;
+}
+
+.btn-orcamento {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 22px;
+
+  border-radius: 14px;
+
+  background: #fff;
+  color: #111827;
+
+  font-weight: 700;
+
+  transition: .2s ease;
+}
+
+.btn-orcamento:hover {
+  transform: translateY(-2px);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   TABLET
+───────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+
+  .servicos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MOBILE
+───────────────────────────────────────────────────────────── */
+@media (max-width: 700px) {
+
+  .topo-container {
+    padding: 14px 18px;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .topo nav {
+    position: absolute;
+
+    top: calc(100% + 10px);
+    left: 16px;
+    right: 16px;
+
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 12px;
+
+    padding: 18px;
+
+    background: rgba(15, 23, 42, .98);
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    border-radius: 24px;
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, .35);
+
+    z-index: 999;
+  }
+
+  .topo nav.nav-open {
+    display: flex;
+  }
+
+  .topo nav a {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, .04);
+  }
+
+  .topo nav a::after {
+    display: none;
+  }
+
+  .btn-quero-ser-prestador,
+  .btn-painel,
+  .btn-entrar,
+  .btn-sair,
+  .btn-google,
+  .btn-perfil {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .page-wrapper {
+    padding: 32px 18px 50px;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .servicos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filtro-bar {
+    flex-direction: column;
+  }
+
+  #busca,
+  #filtroCategoria {
+    width: 100%;
+  }
+
+  .cta-box {
+    padding: 36px 22px;
+    border-radius: 24px;
+  }
+
+  .cta-box h2 {
+    font-size: 1.6rem;
+  }
+
+  /* ─────────────────────────────────────────────────────────────
+   PAGINAÇÃO
+───────────────────────────────────────────────────────────── */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 42px;
+  flex-wrap: wrap;
+}
+
+.page-btn {
+  min-width: 54px;
+  height: 54px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #111827;
+  color: #fff;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background .2s ease,
+    transform .2s ease,
+    opacity .2s ease;
+}
+
+.page-btn:hover {
+  transform: translateY(-2px);
+  opacity: .95;
+}
+
+.page-btn.active {
+  background: #f59e0b;
+  color: #000;
+}
+
+.page-btn.disabled {
+  opacity: .35;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+
+  .pagination {
+    gap: 8px;
+  }
+
+  .page-btn {
+    min-width: 46px;
+    height: 46px;
+    font-size: 14px;
+  }
+}
+}

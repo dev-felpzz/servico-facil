@@ -1,0 +1,10 @@
+Flask
+gunicorn
+mysql-connector-python
+Authlib
+Flask-Dance
+python-dotenv
+requests
+resend
+itsdangerous
+bcrypt
