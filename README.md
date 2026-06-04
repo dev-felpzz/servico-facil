@@ -50,3 +50,14 @@ Essa divisão permitiu a colaboração entre diferentes áreas do desenvolviment
 ---
 
 ⭐ Projeto desenvolvido para fins acadêmicos e portfólio.
+
+## 📲 Acesse o projeto
+
+Escaneie o QR Code abaixo para acessar o Agenda Fácil diretamente pelo celular:
+
+<p align="center">
+  <img src="./assets/qrcode-site.png" alt="QR Code Agenda Fácil" width="250">
+</p>
+
+🔗 Ou acesse pelo link:
+https://seu-site.com
