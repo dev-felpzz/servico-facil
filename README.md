@@ -1,7 +1,7 @@
 
-# 📅 Agenda Fácil
+# 📅 Serviço Fácil
 
-O **Agenda Fácil** é uma aplicação web desenvolvida para conectar clientes a prestadores de serviços de forma rápida e prática, permitindo a solicitação de orçamentos personalizados em poucos cliques.
+O **Serviço Fácil** é uma aplicação web desenvolvida para conectar clientes a prestadores de serviços de forma rápida e prática, permitindo a solicitação de orçamentos personalizados em poucos cliques.
 
 ## 🚀 Funcionalidades
 
