@@ -1,7 +1,13 @@
 
+<<<<<<< HEAD
 # 📅 Serviço fácil
 
 O **Serviço fácil** é uma aplicação web desenvolvida para conectar clientes a prestadores de serviços de forma rápida e prática, permitindo a solicitação de orçamentos personalizados em poucos cliques.
+=======
+# 📅 Serviço Fácil
+
+O **Serviço Fácil** é uma aplicação web desenvolvida para conectar clientes a prestadores de serviços de forma rápida e prática, permitindo a solicitação de orçamentos personalizados em poucos cliques.
+>>>>>>> 1f6336319c5429ad23bfac6441ae5288eebbb2b4
 
 ## 🚀 Funcionalidades
 
@@ -49,4 +55,19 @@ Essa divisão permitiu a colaboração entre diferentes áreas do desenvolviment
 
 ---
 
+<<<<<<< HEAD
 ⭐ Projeto desenvolvido para fins acadêmicos e portfólio.
+=======
+⭐ Projeto desenvolvido para fins acadêmicos e portfólio.
+
+## 📲 Acesse o projeto
+
+Escaneie o QR Code abaixo para acessar o Agenda Fácil diretamente pelo celular:
+
+<p align="center">
+  <img src="./assets/qrcode-site.png" alt="QR Code Agenda Fácil" width="250">
+</p>
+
+🔗 Ou acesse pelo link:
+https://projeto-integrador-4aw2.onrender.com/
+>>>>>>> 1f6336319c5429ad23bfac6441ae5288eebbb2b4
