@@ -1,5 +1,5 @@
 
-<<<<<<< HEAD
+
 # 📅 Serviço fácil
 
 O **Serviço fácil** é uma aplicação web desenvolvida para conectar clientes a prestadores de serviços de forma rápida e prática, permitindo a solicitação de orçamentos personalizados em poucos cliques.
@@ -7,7 +7,7 @@ O **Serviço fácil** é uma aplicação web desenvolvida para conectar clientes
 # 📅 Serviço Fácil
 
 O **Serviço Fácil** é uma aplicação web desenvolvida para conectar clientes a prestadores de serviços de forma rápida e prática, permitindo a solicitação de orçamentos personalizados em poucos cliques.
->>>>>>> 1f6336319c5429ad23bfac6441ae5288eebbb2b4
+
 
 ## 🚀 Funcionalidades
 
@@ -55,7 +55,6 @@ Essa divisão permitiu a colaboração entre diferentes áreas do desenvolviment
 
 ---
 
-<<<<<<< HEAD
 ⭐ Projeto desenvolvido para fins acadêmicos e portfólio.
 =======
 ⭐ Projeto desenvolvido para fins acadêmicos e portfólio.
